@@ -10,3 +10,8 @@ output "reserved" {
   value = azurerm_service_plan.service_plan.reserved
   description = "- Whether this is a reserved Service Plan Type. `true` if `os_type` is `Linux`, otherwise `false`."
 }
+#output all the values
+output "all" {
+  value = azurerm_service_plan.service_plan
+  description = "- All the values of the Service Plan in json format."
+}
