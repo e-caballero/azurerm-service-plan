@@ -11,7 +11,7 @@ provider "azurerm" {
 }
 
 module "resource_group" {
-source = "git::https://github.com/erikcaballero/azure-resource-group?ref=v1"
+source = "git::https://github.com/e-caballero/azure-resource-group?ref=v1"
 
 # Required Inputs
 location                  = var.location
@@ -33,7 +33,7 @@ description               = "Resource Group for Demo"
 }
 
 module "service_plan" {
-  source                    = https://github.com/erikcaballero/azure-service-plan?ref=v1
+  source                    = https://github.com/e-caballero/azure-service-plan?ref=v1
   resource_group_name       = module.resource_group.name
   location                  = var.location
   count_number              = var.count_number
